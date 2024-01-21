@@ -22,7 +22,7 @@ export class UsuariosComponent implements OnInit{
 
   guardarUsuario(usuario: Usuario) {
     this.usuarioService.guardarUsuario(usuario);
-    this.usuarios = this.usuarioService.obtenerUsuarios();
+    //this.usuarios = this.usuarioService.obtenerUsuarios();
   }
 
   actualizarUsuario(usuario: Usuario) {

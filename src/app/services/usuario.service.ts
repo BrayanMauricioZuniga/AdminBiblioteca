@@ -6,7 +6,7 @@ import { Usuario } from '../models/usuario';
 })
 export class UsuariosService {
 
-  private usuarios: Usuario[] = [];
+  private usuarios: Usuario[] =[];
 
   constructor() { }
 
