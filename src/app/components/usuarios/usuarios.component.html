@@ -1,1 +1,30 @@
-<p>usuarios works!</p>
+<form #formulario="ngForm" (submit)="guardarUsuario(formulario.value)">
+
+    <div>
+        <label> ID </label>        
+        <input type="text" name="title" ngModel>    
+    </div>  
+
+    <div>
+        <label> Nombre </label>        
+        <input type="text" name="title" ngModel>    
+    </div>    
+    
+    <div>        
+        <label> Libros Prestados </label>        
+        <input type="text" name="description" ngModel>   
+    </div>
+   
+    <input type="submit" value="Añadir Usuario">
+
+    
+
+</form>
+
+<div *ngFor="let usuario of usuarios">
+    <p>{{ usuario.id }} - {{ usuario.nombre }} - {{ usuario.librosPrestados }}
+        
+        <button (click)="eliminarUsuario(usuario.id)">Eliminar</button>
+        <button (click)="actualizarUsuario(usuario)">Editar</button>
+    </p>
+</div>
